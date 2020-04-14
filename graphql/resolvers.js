@@ -4,7 +4,7 @@ const resolvers = {
     Query: {
         movies: (_, {rating, limit}) => getMovies(limit, rating),
         movie : (_, { id }) => getMovie(id),
-        suggestion: (_, { id }) => getSuggestions(id)
+        suggestions: (_, { id }) => getSuggestions(id)
     }
 };
 

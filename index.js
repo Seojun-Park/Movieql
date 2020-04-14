@@ -1,6 +1,8 @@
 import { GraphQLServer } from 'graphql-yoga';
 import resolvers from './graphql/resolvers';
 
+const PORT = 4000;
+
 const server = new GraphQLServer({
     typeDefs: ` type Movie {
         id: Int!
@@ -28,4 +30,4 @@ const server = new GraphQLServer({
     resolvers
 })
 
-server.start(()  => console.log("Graphql Server Running"));
+server.start({ port: PORT }, ()  => console.log(`Graphql Server Running on ${PORT}`));
