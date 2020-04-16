@@ -12,6 +12,13 @@ const server = new GraphQLServer({
         language: String
         medium_cover_image: String
         genres: [String]
+        small_cover_image: String
+        large_cover_image: String
+        background_image: String
+        year: Int
+        summary: String
+        runtime: Int
+        synopsis: String
     }
     
     type Query {
